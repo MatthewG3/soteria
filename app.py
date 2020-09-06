@@ -13,7 +13,7 @@ def hello():
     if request.method == 'POST':
         print('Incoming..')
         print(request.get_json())  # parse as JSON
-        return 'OK', 200
+        return 0, 200
 
     # GET request
     else:
