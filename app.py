@@ -23,7 +23,7 @@ def test_page():
 
 @app.route('/', methods=['GET', 'POST'])
 def homepage():
-    message = 'this is some bullshit'
+    message = 'it works'
     return message
 
 
