@@ -17,8 +17,9 @@ def hello():
 
     # GET request
     else:
-        message = {'greeting':'Hello from Flask!'}
-        return jsonify(message)  # serialize and use JSON headers
+        message = '0'
+        return message 
+
 
 @app.route('/test')
 def test_page():
