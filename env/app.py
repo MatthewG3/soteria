@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 app = Flask(__name__)
 
+PORT = process.env.port or 5000
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
 
@@ -22,4 +23,4 @@ def test_page():
 
 
 if __name__ == "__main__":
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True, port=PORT)
