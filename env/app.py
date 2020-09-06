@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 app = Flask(__name__)
 
-PORT = process.env.port or 5000
+
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
 
@@ -21,6 +21,11 @@ def test_page():
     # look inside `templates` and serve `index.html`
     return render_template('index.html')
 
+@app.route('/', methods=['GET', 'POST'])
+def homepage():
+    message = 'this is some bullshit'
+    return message
+
 
 if __name__ == "__main__":
-    app.run(threaded=True, port=PORT)
+    app.run()
